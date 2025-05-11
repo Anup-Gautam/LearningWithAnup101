@@ -26,3 +26,4 @@ if __name__ == "__main__":
     print(f"Mean (manual calculation): {mean_manual}")
     print(f"Mean (NumPy calculation): {mean_numpy}")
     print(f"Both methods give the same result: {mean_manual == mean_numpy}")
+    # this is testing for contribution in open source
