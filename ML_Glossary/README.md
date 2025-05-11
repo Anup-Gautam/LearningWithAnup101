@@ -2,7 +2,9 @@
 
 This repository contains visualizations and explanations of various machine learning concepts, starting with Measures of Central Tendency.
 
-## PlottingMean.py
+## Mean Visualizations
+
+### PlottingMean.py
 
 This script creates a comprehensive visualization showing different aspects of the mean, including:
 
@@ -11,6 +13,26 @@ This script creates a comprehensive visualization showing different aspects of t
 - Non-symmetrical data analysis
 - Categorical data handling
 - Imbalanced dataset considerations
+
+## Median Visualizations
+
+### PlottingMedian.py
+
+This script creates a comprehensive visualization showing different aspects of the median, including:
+
+- Outlier resistance
+- Symmetric distribution analysis
+- Unequally important values
+- Median stability with small changes
+
+### Median.py
+
+This script demonstrates practical examples of using the median in data analysis, including:
+
+- Basic median calculations
+- Handling outliers
+- Comparing mean vs median
+- Real-world applications
 
 ## Setup Instructions
 
@@ -41,17 +63,27 @@ pip install pandas
 pip install scipy
 ```
 
-### 3. Run the Script
+### 3. Run the Scripts
 
 ```bash
 # Make sure you're in the Measures_of_Central_Tendency directory
 cd Measures_of_Central_Tendency
 
-# Run the script
+# Run the Mean visualization
 python PlottingMean.py
+
+# Run the Median visualization
+python PlottingMedian.py
+
+# Run the Median examples
+python Median.py
 ```
 
-The script will generate a visualization saved as 'mean_advantages_disadvantages.png' in the current directory and display the plot.
+The scripts will generate visualizations saved as:
+
+- 'mean_advantages_disadvantages.png'
+- 'median_advantages_disadvantages.png'
+  in the current directory and display the plots.
 
 ## Requirements
 
@@ -64,6 +96,8 @@ The script will generate a visualization saved as 'mean_advantages_disadvantages
 
 ## Output
 
+### Mean Visualization (PlottingMean.py)
+
 The script generates a figure with 6 subplots:
 
 1. Why Mean is important: Shows best value to minimize error
@@ -74,3 +108,24 @@ The script generates a figure with 6 subplots:
 6. Summary of when to use/not use Mean
 
 The visualization will be saved as 'mean_advantages_disadvantages.png' in the current directory.
+
+### Median Visualization (PlottingMedian.py)
+
+The script generates a figure with 4 subplots:
+
+1. Outlier Resistance: Shows how median is less affected by outliers
+2. Symmetric Data: Demonstrates when mean equals median
+3. All Values Matter: Shows when to use mean instead of median
+4. Median Stability: Illustrates how median remains stable with small changes
+
+The visualization will be saved as 'median_advantages_disadvantages.png' in the current directory.
+
+### Median Examples (Median.py)
+
+This script provides:
+
+- Interactive examples of median calculations
+- Comparison with mean in different scenarios
+- Practical applications and use cases
+
+The visualizations will be saved as PNG files in the current directory.
