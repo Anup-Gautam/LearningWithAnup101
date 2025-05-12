@@ -34,6 +34,26 @@ This script demonstrates practical examples of using the median in data analysis
 - Comparing mean vs median
 - Real-world applications
 
+## Mode Visualizations
+
+### PlottingMode.py
+
+This script creates a comprehensive visualization showing different aspects of the mode, including:
+
+- Categorical data analysis
+- Discrete data handling
+- Multiple modes (bimodal/multimodal distributions)
+- Mode vs Mean vs Median comparison
+
+### Mode.py
+
+This script demonstrates practical examples of using the mode in data analysis, including:
+
+- Basic mode calculations
+- Handling categorical data
+- Finding most frequent values
+- Real-world applications
+
 ## Setup Instructions
 
 ### 1. Create a Virtual Environment
@@ -77,13 +97,21 @@ python PlottingMedian.py
 
 # Run the Median examples
 python Median.py
+
+# Run the Mode visualization
+python PlottingMode.py
+
+# Run the Mode examples
+python Mode.py
 ```
 
 The scripts will generate visualizations saved as:
 
 - 'mean_advantages_disadvantages.png'
 - 'median_advantages_disadvantages.png'
-  in the current directory and display the plots.
+- 'mode_advantages_disadvantages.png'
+
+in the current directory and display the plots.
 
 ## Requirements
 
@@ -126,6 +154,28 @@ This script provides:
 
 - Interactive examples of median calculations
 - Comparison with mean in different scenarios
+- Practical applications and use cases
+
+The visualizations will be saved as PNG files in the current directory.
+
+### Mode Visualization (PlottingMode.py)
+
+The script generates a figure with 4 subplots:
+
+1. Categorical Data: Shows how mode is the best measure for categorical data
+2. Discrete Data: Demonstrates mode's effectiveness with discrete values
+3. Multiple Modes: Illustrates bimodal and multimodal distributions
+4. Comparison: Shows when to use mode vs mean vs median
+
+The visualization will be saved as 'mode_advantages_disadvantages.png' in the current directory.
+
+### Mode Examples (Mode.py)
+
+This script provides:
+
+- Interactive examples of mode calculations
+- Handling categorical and discrete data
+- Finding most frequent values in datasets
 - Practical applications and use cases
 
 The visualizations will be saved as PNG files in the current directory.
