@@ -15,7 +15,7 @@ There are two main types of hypotheses in statistical testing:
 - Considered true until evidence proves otherwise (like being _innocent until proven guilty_).
 
 **Example**:  
-_The medicine has no effect on blood pressure._
+🩺 _The medicine has no effect on blood pressure._
 
 ### 2. Alternative Hypothesis (H₁ or Ha)
 
@@ -24,11 +24,11 @@ _The medicine has no effect on blood pressure._
 - This is what researchers aim to support with evidence.
 
 **Example**:  
-_The medicine changes blood pressure._
+🩺 _The medicine changes blood pressure._
 
 ---
 
-## Types of Alternative Hypotheses
+## 🔄 Types of Alternative Hypotheses
 
 ### Non-Directional Hypothesis
 
@@ -36,30 +36,47 @@ _The medicine changes blood pressure._
 - Used when researchers are only interested in finding a difference.
 
 **Example**:  
- _The new medication has an effect on blood pressure (either increase or decrease)._
+🩺 _The new medication has an effect on blood pressure (either increase or decrease)._
 
 ### Directional Hypothesis
 
 - Predicts the **specific direction** of the effect (increase or decrease).
 
 **Example**:  
- _The new medication decreases the blood pressure._
+🩺 _The new medication decreases the blood pressure._
 
 ---
 
-## 📊 Logic of Hypothesis Testing
+## 📊 Logic of Hypothesis Testing (with Examples)
 
-1. **Start with the Null Hypothesis** (assume it's true).
-2. **Collect sample data** through experimentation or observation.
-3. **Calculate a test statistic** (e.g., t-test, z-test).
-4. **Assess the likelihood** of observing such data under the null hypothesis.
-5. **Make a decision**:
-   - Reject the null hypothesis, or
-   - Fail to reject the null hypothesis.
+### 1. Start with the Null Hypothesis
+
+- **Right**: Assume the medicine has no effect on blood pressure.
+- **Wrong**: Assume the medicine definitely lowers blood pressure.
+
+### 2. Collect Sample Data
+
+- **Right**: Conduct a clinical trial with 100 patients and record their blood pressure before and after taking the medicine.
+- **Wrong**: Collect opinions from people without actual data.
+
+### 3. Calculate a Test Statistic
+
+- **Right**: Use a t-test to compare the average blood pressure before and after the medication.
+- **Wrong**: Just visually inspect the data without statistical testing.
+
+### 4. Determine the Unlikeliness of Null Hypothesis
+
+- **Right**: Check if the p-value is below 0.05 to decide statistical significance.
+- **Wrong**: Assume any change automatically means the null is false.
+
+### 5. Make a Decision: Reject or Fail to Reject H₀
+
+- **Right**: If p < 0.05, reject the null hypothesis. If not, fail to reject it.
+- **Wrong**: Say the null hypothesis is “proven” or “true” based on one test.
 
 ---
 
-## Hypothesis Testing Errors
+## ⚠️ Hypothesis Testing Errors
 
 ### Type I Error (False Positive)
 
@@ -81,16 +98,33 @@ _The medicine changes blood pressure._
 
 ---
 
-## Characteristics of a Good Hypothesis
+## ✅ Characteristics of a Good Hypothesis (with Examples)
 
-A good hypothesis should be:
+### 1. Clear and Precise
 
-- **Clear and Precise** – Easy to understand.
-- **Falsifiable** – Capable of being proven wrong.
-- **Based on Theory or Evidence** – Grounded in prior research.
-- **Relevant** – Meaningful and related to the research question.
-- **Operational** – Clearly defines how the concepts will be measured.
+- ✅ _The new medication lowers systolic blood pressure in adults over 60._
+- ❌ _The medicine might help health a bit._
+
+### 2. Falsifiable
+
+- ✅ _If blood pressure does not decrease after medication, the hypothesis is disproved._
+- ❌ _This medicine is magical and works spiritually._ (Cannot be tested)
+
+### 3. Based on Theory or Evidence
+
+- ✅ _Previous studies have shown related drugs reduce blood pressure, so we hypothesize this one will too._
+- ❌ _I just feel like this might do something._
+
+### 4. Relevant
+
+- ✅ _This hypothesis helps determine treatment for hypertension._
+- ❌ _This hypothesis checks whether people like the color of the pill._
+
+### 5. Operational
+
+- ✅ _"Lowering blood pressure" is defined as a 10 mmHg decrease in systolic pressure within 1 month of use._
+- ❌ _It helps in some vague way._
 
 ---
 
-_A well-constructed hypothesis sets the direction for scientific inquiry and helps avoid misinterpretation of data._
+🎯 _A well-constructed hypothesis sets the direction for scientific inquiry and helps avoid misinterpretation of data._
