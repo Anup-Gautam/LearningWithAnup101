@@ -8,9 +8,9 @@ Manhattan distance, also known as taxicab or city block distance, measures the d
 
 The Manhattan distance between two points **p** and **q** in _n_-dimensional space is:
 
-\[
-d(p,q) = \sum\_{i=1}^{n} |q_i - p_i|
-\]
+$$
+d(p,q) = \sum_{i=1}^{n} |q_i - p_i|
+$$
 
 ### Python Example
 
