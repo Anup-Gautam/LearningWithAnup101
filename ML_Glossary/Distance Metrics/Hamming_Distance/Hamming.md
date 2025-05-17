@@ -8,9 +8,9 @@ Hamming distance measures the number of positions at which corresponding element
 
 The Hamming distance between two strings or sequences **p** and **q** of equal length _n_ is:
 
-\[
-d(p,q) = \sum\_{i=1}^{n} \delta(p_i,q_i)
-\]
+$$
+d(p, q) = \sum_{i=1}^{n} \delta(p_i, q_i)
+$$
 
 Where δ(pi,qi) equals 1 if pi ≠ qi and 0 if pi = qi.
 

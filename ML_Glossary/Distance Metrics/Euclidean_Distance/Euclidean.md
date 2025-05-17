@@ -8,9 +8,9 @@ Euclidean distance is the straight-line distance between two points in Euclidean
 
 The Euclidean distance between two points **p** and **q** in _n_-dimensional space is calculated as:
 
-\[
+$$
 d(p,q) = \sqrt{(q_1 - p_1)^2 + (q_2 - p_2)^2 + \dots + (q_n - p_n)^2}
-\]
+$$
 
 Or, more compactly:
 
