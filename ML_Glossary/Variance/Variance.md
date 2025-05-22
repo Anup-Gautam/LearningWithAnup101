@@ -1,4 +1,4 @@
-# Variance: A Deep Dive into Statistics and Machine Learning
+# Variance
 
 ## What is Variance?
 
@@ -6,22 +6,23 @@
 
 ### Population Variance Formula
 
-```
-σ^2 = (1/N) * ∑ (x_i - μ)^2
-```
+$$\sigma^2 = \frac{1}{N} \sum_{i=1}^{N} (x_i - \mu)^2$$
 
-- \( x_i \): Each individual value
-- \( μ \): Mean of the population
-- \( N \): Number of data points
+where,
+
+- $x_i$: Each individual value
+- $\mu$: Mean of the population
+- $N$: Number of data points
 
 ### Sample Variance Formula
 
-```
-s^2 = (1/(n - 1)) * ∑ (x_i - x̄)^2
-```
+$$s^2 = \frac{1}{n-1} \sum_{i=1}^{n} (x_i - \bar{x})^2$$
 
-- \( x̄ \): Sample mean
-- \( n \): Sample size
+Where:
+
+- $x_i$: Each individual value
+- $\bar{x}$: Sample mean
+- $n$: Sample size
 
 The sample formula uses **Bessel’s correction** to give an unbiased estimate of the population variance.
 
