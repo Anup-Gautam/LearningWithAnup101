@@ -62,7 +62,7 @@ plt.show()
 
 ## Variance
 
-Variance measures how much the model predictions change for different training sets. A detailed discussion of variance is available [here](#) (link to detailed variance section).
+Variance measures how much the model predictions change for different training sets. A detailed discussion of variance is available [here](#https://www.linkedin.com/posts/anupgautamag_%F0%9D%97%9F%F0%9D%97%B2%F0%9D%97%AE%F0%9D%97%BF%F0%9D%97%BB%F0%9D%97%B6%F0%9D%97%BB%F0%9D%97%B4%F0%9D%97%AA%F0%9D%97%B6%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%94%F0%9D%97%BB%F0%9D%98%82%F0%9D%97%BD%F0%9D%9F%AD%F0%9D%9F%AC%F0%9D%9F%AD-activity-7331315738911092737-oJAS?utm_source=share&utm_medium=member_desktop&rcm=ACoAADXkCWUBZ6mFenoK_Tfp32zdaQt9XL2c21c) (link to detailed variance section).
 
 ---
 
