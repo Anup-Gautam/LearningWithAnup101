@@ -876,7 +876,7 @@ Neural networks trained to reconstruct input data. Points with high reconstructi
 
 **Code Implementation**:
 
-````python
+```python
 import tensorflow as tf
 from tensorflow.keras import layers, Model
 from sklearn.preprocessing import StandardScaler
@@ -1012,6 +1012,7 @@ plt.legend()
 
 plt.tight_layout()
 plt.show()
+```
 
 ### Gaussian Mixture Models (GMM)
 
@@ -1020,6 +1021,7 @@ Identifies outliers as points with low probability under the learned distributio
 **Mathematical Concept**: Models data as a mixture of Gaussian distributions and computes likelihood of each point.
 
 **Code Implementation**:
+
 ```python
 from sklearn.mixture import GaussianMixture
 
@@ -1104,6 +1106,7 @@ plt.legend()
 
 plt.tight_layout()
 plt.show()
+```
 
 ---
 
@@ -1114,6 +1117,7 @@ plt.show()
 Fits models while being robust to outliers by iteratively selecting random subsets.
 
 **Algorithm**:
+
 1. Randomly select minimal subset of data
 2. Fit model to subset
 3. Count inliers (points close to model)
@@ -1122,6 +1126,7 @@ Fits models while being robust to outliers by iteratively selecting random subse
 **Real-world Example**: Fitting a line to data with measurement errors.
 
 **Code Implementation**:
+
 ```python
 from sklearn.linear_model import RANSACRegressor, LinearRegression
 import numpy as np
@@ -1218,7 +1223,7 @@ plt.legend()
 
 plt.tight_layout()
 plt.show()
-````
+```
 
 ### Robust Regression (Huber)
 
