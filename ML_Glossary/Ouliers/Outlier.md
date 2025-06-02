@@ -781,7 +781,7 @@ Learns a boundary around normal data points and identifies outliers as points ou
 
 **Code Implementation**:
 
-````python
+```python
 from sklearn.svm import OneClassSVM
 from sklearn.preprocessing import StandardScaler
 
@@ -866,6 +866,8 @@ plt.legend()
 plt.tight_layout()
 plt.show()
 
+```
+
 ### Autoencoders
 
 Neural networks trained to reconstruct input data. Points with high reconstruction error are considered outliers.
@@ -873,7 +875,8 @@ Neural networks trained to reconstruct input data. Points with high reconstructi
 **Architecture**: Input → Encoder → Latent Space → Decoder → Output
 
 **Code Implementation**:
-```python
+
+````python
 import tensorflow as tf
 from tensorflow.keras import layers, Model
 from sklearn.preprocessing import StandardScaler
