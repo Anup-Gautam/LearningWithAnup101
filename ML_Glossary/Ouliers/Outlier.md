@@ -1215,6 +1215,7 @@ plt.legend()
 
 plt.tight_layout()
 plt.show()
+````
 
 ### Robust Regression (Huber)
 
@@ -1222,7 +1223,6 @@ Uses robust loss functions that are less sensitive to outliers than ordinary lea
 
 **Mathematical Formula**:
 Huber loss function:
-````
 
 L(r) = {
 0.5 _ r² if |r| ≤ δ
