@@ -1229,10 +1229,10 @@ L(r) = {
 δ _ (|r| - 0.5 \* δ) if |r| > δ
 }
 
-````
 Where r is the residual and δ is the threshold parameter.
 
 **Code Implementation**:
+
 ```python
 from sklearn.linear_model import HuberRegressor
 from sklearn.metrics import mean_squared_error
@@ -1334,7 +1334,7 @@ plt.show()
 Measures distance accounting for covariance structure of the data.
 
 **Mathematical Formula**:
-````
+```
 
 D²(x) = (x - μ)ᵀ Σ⁻¹ (x - μ)
 
