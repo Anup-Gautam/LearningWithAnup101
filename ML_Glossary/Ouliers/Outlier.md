@@ -1241,7 +1241,7 @@ Where r is the residual and δ is the threshold parameter.
 
 **Code Implementation**:
 
-````python
+```python
 from sklearn.linear_model import HuberRegressor
 from sklearn.metrics import mean_squared_error
 
@@ -1332,6 +1332,7 @@ plt.legend()
 
 plt.tight_layout()
 plt.show()
+```
 
 ---
 
@@ -1343,11 +1344,10 @@ Measures distance accounting for covariance structure of the data.
 
 **Mathematical Formula**:
 
-
 D²(x) = (x - μ)ᵀ Σ⁻¹ (x - μ)
 
-
 Where:
+
 - x = data point
 - μ = mean vector
 - Σ = covariance matrix
@@ -1355,6 +1355,7 @@ Where:
 **Real-world Example**: Medical diagnosis based on multiple biomarkers.
 
 **Code Implementation**:
+
 ```python
 from scipy.spatial.distance import mahalanobis
 from scipy.stats import chi2
@@ -1463,6 +1464,7 @@ plt.legend()
 
 plt.tight_layout()
 plt.show()
+```
 
 ### Principal Component Analysis (PCA) for Outlier Detection
 
@@ -1471,6 +1473,7 @@ Projects data to principal component space where outliers often become more appa
 **Principle**: Outliers often have unusual patterns in the principal component space, especially in later components.
 
 **Code Implementation**:
+
 ```python
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
@@ -1621,6 +1624,7 @@ plt.legend()
 
 plt.tight_layout()
 plt.show()
+```
 
 ### Minimum Covariance Determinant (MCD)
 
@@ -1629,6 +1633,7 @@ Robust estimator of covariance matrix that is less affected by outliers.
 **Principle**: Finds the subset of observations whose covariance matrix has the smallest determinant.
 
 **Code Implementation**:
+
 ```python
 from sklearn.covariance import EllipticEnvelope
 
@@ -1760,6 +1765,7 @@ plt.title('Portfolio Correlation Matrix')
 
 plt.tight_layout()
 plt.show()
+```
 
 ---
 
@@ -1770,11 +1776,13 @@ plt.show()
 Separates time series into trend, seasonal, and residual components to identify anomalies.
 
 **Components**:
+
 - **Trend**: Long-term movement
 - **Seasonal**: Regular periodic patterns
 - **Residual**: Random fluctuations (where outliers are detected)
 
 **Code Implementation**:
+
 ```python
 from statsmodels.tsa.seasonal import seasonal_decompose
 import pandas as pd
@@ -1895,6 +1903,7 @@ plt.legend()
 
 plt.tight_layout()
 plt.show()
+```
 
 ### ARIMA-based Outlier Detection
 
@@ -1903,6 +1912,7 @@ Fits autoregressive models and identifies outliers as points with large residual
 **Mathematical Concept**: ARIMA(p,d,q) models use past values and errors to predict current values. Large prediction errors indicate outliers.
 
 **Code Implementation**:
+
 ```python
 from statsmodels.tsa.arima.model import ARIMA
 from statsmodels.stats.diagnostic import acorr_ljungbox
@@ -2014,17 +2024,20 @@ plt.show()
 # Model diagnostics
 print(f"\nModel Diagnostics:")
 print(f"Ljung-Box test p-value: {acorr_ljungbox(residuals, lags=10, return_df=True)['lb_pvalue'].iloc[-1]:.4f}")
+```
 
 ### Change Point Detection
 
 Identifies sudden changes in time series behavior.
 
 **Methods**:
+
 - **CUSUM**: Cumulative sum control chart
 - **Bayesian Change Point**: Probabilistic approach
 - **Binary Segmentation**: Recursive partitioning
 
 **Code Implementation**:
+
 ```python
 import ruptures as rpt  # You may need: pip install ruptures
 
@@ -2179,12 +2192,14 @@ except ImportError:
 
     change_points_simple = simple_cusum_change_points(latency, threshold=100)
     print(f"Simple CUSUM change points: {change_points_simple[:10]}")  # Show first 10
+```
 
 ### Sliding Window Approach
 
 Detects outliers by comparing current observations with recent historical data.
 
 **Code Implementation**:
+
 ```python
 def detect_outliers_sliding_window(data, window_size=50, threshold=2.5, step_size=1):
     """
@@ -2272,6 +2287,7 @@ plt.legend()
 
 plt.tight_layout()
 plt.show()
+```
 
 ---
 
@@ -2284,7 +2300,8 @@ Understanding how to evaluate outlier detection performance is crucial for selec
 When ground truth labels are available, we can treat outlier detection as a binary classification problem.
 
 **Code Implementation**:
-```python
+
+````python
 from sklearn.metrics import precision_score, recall_score, f1_score, roc_auc_score, confusion_matrix
 import seaborn as sns
 
@@ -2623,18 +2640,21 @@ metrics_direct = evaluate_outlier_detection(
 print(f"\nDirect High-Dimensional Detection:")
 print(f"  F1-Score: {metrics_direct['f1_score']:.3f}")
 print(f"  AUC-ROC: {metrics_direct['auc_roc']:.3f}")
+````
 
 ### Handling Imbalanced Data
 
 Outliers are typically rare, making the dataset highly imbalanced.
 
 **Strategies**:
+
 1. **Adjust contamination parameter**: Set based on domain knowledge
 2. **Cost-sensitive learning**: Penalize false negatives more
 3. **Ensemble methods**: Combine multiple detectors
 4. **Threshold tuning**: Optimize based on business cost
 
 **Code Implementation**:
+
 ```python
 def optimize_threshold_for_imbalanced_data(y_true, y_scores, cost_fp=1, cost_fn=10):
     """
@@ -2766,18 +2786,21 @@ plt.grid(True, alpha=0.3)
 
 plt.tight_layout()
 plt.show()
+```
 
 ### Domain Knowledge Integration
 
 Incorporating domain expertise is crucial for effective outlier detection.
 
 **Strategies**:
+
 1. **Feature engineering**: Create domain-specific features
 2. **Rule-based filtering**: Apply business rules before detection
 3. **Interpretable models**: Use models that provide explanations
 4. **Human-in-the-loop**: Combine automated detection with expert review
 
 **Code Implementation**:
+
 ```python
 def create_domain_features(data, domain='financial'):
     """
@@ -2952,18 +2975,21 @@ plt.legend()
 
 plt.tight_layout()
 plt.show()
+```
 
 ### Scalability Considerations
 
 For large datasets, computational efficiency becomes critical.
 
 **Strategies**:
+
 1. **Sampling**: Use representative subsets for training
 2. **Online learning**: Process data streams incrementally
 3. **Distributed computing**: Parallelize across multiple machines
 4. **Approximate methods**: Trade accuracy for speed
 
 **Code Implementation**:
+
 ```python
 import time
 from sklearn.utils import shuffle
@@ -3093,6 +3119,7 @@ print(f"{'Baseline':<15} {baseline_outliers:<10} {baseline_time:<10.2f} {baselin
 for method, results in scalability_results.items():
     speedup = baseline_time / results['processing_time']
     print(f"{method.capitalize():<15} {results['outliers_detected']:<10} {results['processing_time']:<10.2f} {speedup:<10.1f}x")
+```
 
 ---
 
@@ -3103,6 +3130,7 @@ for method, results in scalability_results.items():
 Complete implementation of a fraud detection system combining multiple techniques.
 
 **Code Implementation**:
+
 ```python
 class FraudDetectionSystem:
     """
@@ -3304,12 +3332,14 @@ print(f"Combined detections: {fraud_results['combined_fraud'].sum():,}")
 flagged_transactions = fraud_results[fraud_results['combined_fraud'] == 1].head(10)
 print(f"\nSample flagged transactions:")
 print(flagged_transactions[['transaction_id', 'amount', 'fraud_probability', 'rule_based_fraud', 'ml_based_fraud']])
+```
 
 ### Network Security Intrusion Detection
 
 Implementation for detecting network intrusions and cyber attacks.
 
 **Code Implementation**:
+
 ```python
 class NetworkIntrusionDetector:
     """
@@ -3554,6 +3584,7 @@ print(f"\nSample detected intrusions:")
 print(detected_intrusions[['source_ip', 'dest_ip', 'dest_port', 'intrusion_probability', 'ml_score', 'pattern_score']])
 
 ---
+```
 
 ## Conclusion
 
@@ -3562,12 +3593,14 @@ This comprehensive guide has covered the major approaches to outlier detection, 
 ### Key Takeaways
 
 **Method Selection Guidelines**:
+
 - **Statistical methods** (Z-score, IQR): Best for univariate, normally distributed data
 - **Distance-based methods** (LOF, k-NN): Effective for datasets with varying densities
 - **Model-based approaches** (Isolation Forest, Autoencoders): Good for high-dimensional, complex patterns
 - **Time series methods**: Essential for temporal data with trends and seasonality
 
 **Implementation Best Practices**:
+
 1. **Understand your data**: Distribution, dimensionality, and domain characteristics
 2. **Combine multiple methods**: Ensemble approaches often perform better
 3. **Incorporate domain knowledge**: Business rules and expert insight are invaluable
@@ -3575,6 +3608,7 @@ This comprehensive guide has covered the major approaches to outlier detection, 
 5. **Evaluate thoroughly**: Use appropriate metrics and validation strategies
 
 **Real-World Considerations**:
+
 - **Imbalanced data**: Adjust thresholds and consider cost-sensitive approaches
 - **High dimensionality**: Use dimensionality reduction or feature selection
 - **Streaming data**: Implement online or sliding window approaches
@@ -3583,4 +3617,3 @@ This comprehensive guide has covered the major approaches to outlier detection, 
 The choice of outlier detection method should always be driven by your specific use case, data characteristics, and business requirements. Start with simpler methods to establish baselines, then progress to more sophisticated approaches as needed.
 
 Remember that outlier detection is often just the first step in a larger analytical workflow. The real value comes from understanding why outliers occur and taking appropriate action based on the insights gained.
-````
